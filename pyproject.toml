@@ -1,0 +1,23 @@
+[project]
+name = "chess-data"
+version = "0.1.0"
+description = "Download and process CHESS data from ESS-DIVE, mapped to BERVO"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "pandas>=2.0",
+    "xarray>=2024.0",
+    "netCDF4>=1.6",
+    "pyyaml>=6.0",
+    "click>=8.0",
+]
+
+[project.scripts]
+chess = "chess_data.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
