@@ -1,0 +1,63 @@
+chess_variable	bervo_id	bervo_label	match_quality	notes
+Vegetation_Cover	NO_MATCH		gap	BERVO lacks a general "vegetation cover fraction" term. Closest concept: fractional canopy coverage, but no direct term exists. Candidate for BERVO extension.
+Vegetation_Height	BERVO:0000695	Pft canopy height	approximate	CHESS measures field vegetation height; BERVO models canopy height per PFT. Same physical quantity, different context (observation vs. model parameter).
+Vegetation_Height_1	BERVO:0000695	Pft canopy height	approximate	Replicate measurement 1 of vegetation height at plot.
+Vegetation_Height_2	BERVO:0000695	Pft canopy height	approximate	Replicate measurement 2.
+Vegetation_Height_3	BERVO:0000695	Pft canopy height	approximate	Replicate measurement 3.
+Vegetation_Height_4	BERVO:0000695	Pft canopy height	approximate	Replicate measurement 4.
+Vegetation_Species	BERVO:0001057	Number of plant species	weak	CHESS records species identity (categorical); BERVO only has species count. Gap: BERVO needs a "plant species identity" term.
+Stem_Height	BERVO:0000695	Pft canopy height	approximate	Individual stem height measurement. Maps to canopy height conceptually.
+Stem_DBH	NO_MATCH		gap	Diameter at breast height. BERVO has no stem diameter term. Critical gap for forest inventory data.
+Crown_Class	NO_MATCH		gap	Canopy position classification (dominant/codominant/intermediate/suppressed). No BERVO equivalent.
+Crown_Remaining	NO_MATCH		gap	Proportion of crown intact. No BERVO equivalent — relates to tree health/damage assessment.
+Terrain_Aspect	BERVO:0000685	Aspect	exact	Direct match. BERVO:0000685 is terrain aspect (azimuth of slope).
+Cover_Percent	NO_MATCH		gap	Percent cover of a cover type. Same gap as Vegetation_Cover — BERVO lacks cover fraction terms.
+Cover_Type	NO_MATCH		gap	Categorical: bare soil, litter, rock, vegetation, etc. No BERVO equivalent.
+Cover_Class_Name	NO_MATCH		gap	Species or cover class name within a cover type. No BERVO equivalent.
+Cones_Present	NO_MATCH		gap	Phenological observation (cone presence on conifers). No BERVO equivalent.
+Health_Status	NO_MATCH		gap	Tree health classification. No BERVO equivalent.
+Damage_Mode	NO_MATCH		gap	Type of damage (insect, fire, wind, etc.). No BERVO equivalent.
+Trunk_Wound	NO_MATCH		gap	Wound presence on tree trunk. No BERVO equivalent.
+Leaves_Remaining	NO_MATCH		gap	Proportion of leaves remaining (deciduousness indicator). No BERVO equivalent.
+Taxon_binomial	NO_MATCH		gap	Species binomial name. BERVO does not model taxonomy. Out of scope for a biogeochemical variable ontology.
+Taxon_family	NO_MATCH		gap	Taxonomic family. Out of BERVO scope.
+Taxon_label	NO_MATCH		gap	Common/working name for species. Out of BERVO scope.
+Taxon_full_name	NO_MATCH		gap	Full taxonomic name with authority. Out of BERVO scope.
+Taxon_Species	NO_MATCH		gap	Species name. Out of BERVO scope.
+Taxon_Family	NO_MATCH		gap	Taxonomic family (duplicate column). Out of BERVO scope.
+GBIF_Taxon_ID	NO_MATCH		gap	GBIF species identifier. Out of BERVO scope.
+CHESS_Vouchers	NO_MATCH		not_applicable	Herbarium voucher identifiers. Administrative metadata, not a variable.
+Collection_Date	NO_MATCH		not_applicable	Sampling date. Temporal metadata, not a biogeochemical variable.
+Collection_Time	NO_MATCH		not_applicable	Sampling time. Temporal metadata.
+Location_Type	NO_MATCH		not_applicable	Plot type (meadow/shrub/tree). Experimental design metadata.
+Sampling_Area	NO_MATCH		not_applicable	Sampling area identifier. Spatial metadata.
+Sampling_area	NO_MATCH		not_applicable	Same as above (case variant).
+Site_Number	NO_MATCH		not_applicable	Plot number. Spatial metadata.
+Site_number_or_spp	NO_MATCH		not_applicable	Plot number or species code. Administrative.
+Photo_Quadrat	NO_MATCH		not_applicable	Photo file reference. Administrative metadata.
+Photo_PFT_Table	NO_MATCH		not_applicable	Photo file reference.
+Photo_Landscape_North	NO_MATCH		not_applicable	Photo file reference.
+Photo_Landscape_East	NO_MATCH		not_applicable	Photo file reference.
+Photo_Landscape_South	NO_MATCH		not_applicable	Photo file reference.
+Photo_Landscape_West	NO_MATCH		not_applicable	Photo file reference.
+Photo_Shrub	NO_MATCH		not_applicable	Photo file reference.
+Photo_Tag	NO_MATCH		not_applicable	Photo file reference.
+Photo_Tree	NO_MATCH		not_applicable	Photo file reference.
+Sample_label	NO_MATCH		not_applicable	Voucher sample label. Administrative.
+Collected_date	NO_MATCH		not_applicable	Collection date (voucher). Administrative.
+Determination_date	NO_MATCH		not_applicable	Taxonomic determination date. Administrative.
+Entered_by	NO_MATCH		not_applicable	Data entry person. Administrative.
+ID_by	NO_MATCH		not_applicable	Species identifier person. Administrative.
+Key	NO_MATCH		not_applicable	Identification key used. Administrative.
+Notes	NO_MATCH		not_applicable	Free text notes. Administrative.
+Cover_Notes	NO_MATCH		not_applicable	Free text notes on cover. Administrative.
+Shrub_Notes	NO_MATCH		not_applicable	Free text notes on shrubs. Administrative.
+Tree_Notes	NO_MATCH		not_applicable	Free text notes on trees. Administrative.
+file_name	NO_MATCH		not_applicable	File-level metadata descriptor.
+file_description	NO_MATCH		not_applicable	File-level metadata descriptor.
+standard	NO_MATCH		not_applicable	File-level metadata descriptor.
+column_or_row_name	NO_MATCH		not_applicable	Data dictionary column. File-level metadata.
+definition	NO_MATCH		not_applicable	Data dictionary column. File-level metadata.
+data_type	NO_MATCH		not_applicable	Data dictionary column. File-level metadata.
+unit	NO_MATCH		not_applicable	Data dictionary column. File-level metadata.
+variable_name	NO_MATCH		not_applicable	Data dictionary column. File-level metadata.
