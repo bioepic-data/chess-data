@@ -66,9 +66,28 @@ def get_dataset_metadata(dataset_id: str) -> dict:
 
 
 def list_dataset_files(dataset_id: str) -> list[dict]:
-    """List files in a dataset package via SOLR."""
+    """List files in a dataset package via SOLR.
+
+    First resolves the resourceMap ID, then queries for documents in that map.
+    """
+    # Step 1: Get the resourceMap ID for this dataset
     params = {
-        "q": f'resourceMap:"{dataset_id}"',
+        "q": f'id:"{dataset_id}"',
+        "fl": "resourceMap",
+        "wt": "json",
+    }
+    resp = requests.get(SOLR_URL, params=params)
+    resp.raise_for_status()
+    data = resp.json()
+    docs = data.get("response", {}).get("docs", [])
+    if not docs or "resourceMap" not in docs[0]:
+        return []
+
+    resource_map_id = docs[0]["resourceMap"][0]
+
+    # Step 2: Query for all documents in that resourceMap
+    params = {
+        "q": f'resourceMap:"{resource_map_id}"',
         "rows": 500,
         "fl": "id,fileName,title,formatId,size,dateUploaded",
         "wt": "json",

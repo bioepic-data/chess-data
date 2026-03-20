@@ -16,14 +16,21 @@ def extract_variables(input_dir: str = "data/raw/", output_path: str = "data/ext
         if not pkg_dir.is_dir():
             continue
 
-        meta_file = pkg_dir / "metadata.json"
+        meta_file = pkg_dir / "files.json"
+        if not meta_file.exists():
+            meta_file = pkg_dir / "metadata.json"
         if not meta_file.exists():
             continue
 
         with open(meta_file) as f:
             meta = json.load(f)
 
-        dataset_name = meta.get("dataset", {}).get("name", pkg_dir.name)
+        # files.json is a list of SOLR docs; metadata.json has dataset.name
+        if isinstance(meta, list):
+            title_doc = next((d for d in meta if d.get("title")), {})
+            dataset_name = title_doc.get("title", pkg_dir.name)
+        else:
+            dataset_name = meta.get("dataset", {}).get("name", pkg_dir.name)
         dataset_id = pkg_dir.name
 
         # Extract from NetCDF files
